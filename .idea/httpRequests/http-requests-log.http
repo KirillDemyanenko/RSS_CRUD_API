@@ -1,6 +1,166 @@
 GET http://localhost:9000/api/users
 Accept: application/json
 
+<> 2023-07-01T164044.200.json
+
+###
+
+DELETE http://localhost:9000/api/users/b9b5d756-a68b-439d-bbee-14141976b0bd
+Accept: application/json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T164024.200.json
+
+###
+
+DELETE http://localhost:9000/api/users/86a26d6c-922a-437e-ae57-a868e823172e
+Accept: application/json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T164001.200.json
+
+###
+
+DELETE http://localhost:9000/api/users/86fdbe90-ddb4-4cb4-878a-6be567949045
+Accept: application/json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T163938.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T163833.200.json
+
+###
+
+DELETE http://localhost:9000/api/users/c05d5042-b3ea-4e10-876e-d056860bf336
+Accept: application/json
+
+<> 2023-07-01T163823.404.json
+
+###
+
+DELETE http://localhost:9000/api/users/c05d5042-b3ea-4e10-876e-d056860bf336
+Accept: application/json
+
+###
+
+DELETE http://localhost:9000/api/users/023638a9-c55d-473d-8b7c-9b2027b032de
+Accept: application/json
+
+<> 2023-07-01T163753.404.json
+
+###
+
+DELETE http://localhost:9000/api/users/023638a9-c55d-473d-8b7c-9b2027b032de
+Accept: application/json
+
+<> 2023-07-01T163747.404.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T163736.200.json
+
+###
+
+DELETE http://localhost:9000/api/users/023638a9-c55d-473d-8b7c-9b2027b032de
+Accept: application/json
+
+<> 2023-07-01T163314.404.json
+
+###
+
+DELETE http://localhost:9000/api/users/fds
+Accept: application/json
+
+<> 2023-07-01T163306.400.json
+
+###
+
+DELETE http://localhost:9000/api/users/fds
+Accept: application/json
+
+<> 2023-07-01T163304.400.json
+
+###
+
+DELETE http://localhost:9000/api/users/fds
+Accept: application/json
+
+<> 2023-07-01T163003.400.json
+
+###
+
+DELETE http://localhost:9000/api/users/fds
+Accept: application/json
+
+<> 2023-07-01T162957.400.json
+
+###
+
+DELETE http://localhost:9000/api/users/fds
+Accept: application/json
+
+<> 2023-07-01T162941.400.json
+
+###
+
+DELETE http://localhost:9000/api/users/fds
+Accept: application/json
+
+<> 2023-07-01T162932.400.json
+
+###
+
+DELETE http://localhost:9000/api/users/fds
+Accept: application/json
+
+<> 2023-07-01T162929.400.json
+
+###
+
+DELETE http://localhost:9000/api/users/fds
+Accept: application/json
+
+<> 2023-07-01T162927.400.json
+
+###
+
+GET http://localhost:9000/api/users/3972c7ad-178f-456f-83c1-26b72a13a391
+Accept: application/json
+
+<> 2023-07-01T162921.404.json
+
+###
+
+DELETE http://localhost:9000/api/users/fds
+Accept: application/json
+
+<> 2023-07-01T162911.400.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
 <> 2023-07-01T161940.200.json
 
 ###
@@ -219,203 +379,6 @@ Content-Type: application/json
 {"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
 
 <> 2023-07-01T155452.400.json
-
-###
-
-PUT http://localhost:9000/api/users/ds
-Accept: application/json
-Content-Type: application/json
-
-{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
-
-<> 2023-07-01T155322.400.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T155158.200.json
-
-###
-
-GET http://localhost:9000/api/users/3972c7ad-178f-456f-83c1-26b72a13a391
-Accept: application/json
-
-<> 2023-07-01T154319.200.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T154304.200.json
-
-###
-
-POST http://localhost:9000/api/users
-Accept: application/json
-Content-Type: application/json
-
-{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
-
-<> 2023-07-01T154255.200.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T154251.200.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T154148.200.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T154133.200.json
-
-###
-
-POST http://localhost:9000/api/users
-Accept: application/json
-Content-Type: application/json
-
-{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
-
-<> 2023-07-01T154122.200.json
-
-###
-
-POST http://localhost:9000/api/users
-Accept: application/json
-Content-Type: application/json
-
-{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
-
-<> 2023-07-01T154052.200.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T154006.200.json
-
-###
-
-POST http://localhost:9000/api/users
-Accept: application/json
-Content-Type: application/json
-
-{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
-
-<> 2023-07-01T153942.200.json
-
-###
-
-POST http://localhost:9000/api/users
-Accept: application/json
-Content-Type: application/json
-
-{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
-
-<> 2023-07-01T153932.200.json
-
-###
-
-POST http://localhost:9000/api/users
-Accept: application/json
-Content-Type: application/json
-
-{"usernamwe": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
-
-<> 2023-07-01T153736.400.txt
-
-###
-
-GET http://localhost:9000/favicon.ico
-Accept: application/json
-
-###
-
-POST http://localhost:9000/api/users
-Content-Type: application/x-www-form-urlencoded
-
-username=man&age=15&hobbies=fdsf
-
-<> 2023-07-01T151728.400.txt
-
-###
-
-POST http://localhost:9000/api/users
-Content-Type: application/x-www-form-urlencoded
-
-username=man&age=15&hobbies=fdsf
-
-<> 2023-07-01T151627.400.txt
-
-###
-
-POST http://localhost:9000/api/users
-Content-Type: application/x-www-form-urlencoded
-
-username=man&age=15&hobbies=fdsf
-
-<> 2023-07-01T151552.400.txt
-
-###
-
-POST http://localhost:9000/api/users
-Content-Type: application/x-www-form-urlencoded
-
-username=man&age=15&hobbies=fdsf
-
-<> 2023-07-01T151537.400.txt
-
-###
-
-POST http://localhost:9000/api/users
-Content-Type: application/x-www-form-urlencoded
-
-id=99&content=new-element
-
-<> 2023-07-01T151455.400.txt
-
-###
-
-GET http://localhost:9000/api/users/8dbaae73-4fbf-4e1e-94b8-6093bd0eef58
-Accept: application/json
-
-<> 2023-07-01T145847.404.json
-
-###
-
-GET http://localhost:9000/api/users/8dbaae73-4fbf-4e1e-94b8-6093bd0eef58
-Accept: application/json
-
-<> 2023-07-01T145827.404.json
-
-###
-
-GET http://localhost:9000/api/users/8dbaae73-4fbf-4e1e-94b8-6093bd0eef58
-Accept: application/json
-
-<> 2023-07-01T145733.404.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T145713.200.json
 
 ###
 
