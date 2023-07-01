@@ -1,0 +1,421 @@
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T161940.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T161937.200.json
+
+###
+
+PUT http://localhost:9000/api/users/023638a9-c55d-473d-8b7c-9b2027b032de
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man1","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T161932.200.json
+
+###
+
+PUT http://localhost:9000/api/users/023638a9-c55d-473d-8b7c-9b2027b032de
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T161920.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T161909.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T161906.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T161829.200.json
+
+###
+
+PUT http://localhost:9000/api/users/b3c3b9f0-773c-4702-8edc-ed450e56fe0e
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T161817.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T161808.200.json
+
+###
+
+PUT http://localhost:9000/api/users/304c2cd1-f273-4cff-83bd-2ad181b41490
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T161604.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T161554.200.json
+
+###
+
+PUT http://localhost:9000/api/users/f1888895-7655-49ec-bdfc-7f5ac84bc0df
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T161502.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T161449.200.json
+
+###
+
+PUT http://localhost:9000/api/users/5a06ac1d-e47d-4988-822a-10f3974fbc39
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T161411.200.json
+
+###
+
+PUT http://localhost:9000/api/users/5a06ac1d-e47d-4988-822a-10f3974fbc39
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T161410.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T161357.200.json
+
+###
+
+PUT http://localhost:9000/api/users/4a140117-923f-4c22-af50-d25e50455b4e
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T161353.404.json
+
+###
+
+PUT http://localhost:9000/api/users/4a140117-923f-4c22-af50-d25e50455b4e
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T161310.200.json
+
+###
+
+PUT http://localhost:9000/api/users/4a140117-923f-4c22-af50-d25e50455b4e
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T161255.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T161237.200.json
+
+###
+
+PUT http://localhost:9000/api/users/4a140117-923f-4c22-af50-d25e50455b4e
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T161214.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T161158.200.json
+
+###
+
+PUT http://localhost:9000/api/users/7e9ddfe5-0eb9-4c49-a582-bdfc180edfa5
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T155616.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T155604.200.json
+
+###
+
+PUT http://localhost:9000/api/users/3972c7ad-178f-456f-83c1-26b72a13a391
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T155555.404.json
+
+###
+
+PUT http://localhost:9000/api/users/ds
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T155452.400.json
+
+###
+
+PUT http://localhost:9000/api/users/ds
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T155322.400.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T155158.200.json
+
+###
+
+GET http://localhost:9000/api/users/3972c7ad-178f-456f-83c1-26b72a13a391
+Accept: application/json
+
+<> 2023-07-01T154319.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T154304.200.json
+
+###
+
+POST http://localhost:9000/api/users
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T154255.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T154251.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T154148.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T154133.200.json
+
+###
+
+POST http://localhost:9000/api/users
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T154122.200.json
+
+###
+
+POST http://localhost:9000/api/users
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T154052.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T154006.200.json
+
+###
+
+POST http://localhost:9000/api/users
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T153942.200.json
+
+###
+
+POST http://localhost:9000/api/users
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T153932.200.json
+
+###
+
+POST http://localhost:9000/api/users
+Accept: application/json
+Content-Type: application/json
+
+{"usernamwe": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T153736.400.txt
+
+###
+
+GET http://localhost:9000/favicon.ico
+Accept: application/json
+
+###
+
+POST http://localhost:9000/api/users
+Content-Type: application/x-www-form-urlencoded
+
+username=man&age=15&hobbies=fdsf
+
+<> 2023-07-01T151728.400.txt
+
+###
+
+POST http://localhost:9000/api/users
+Content-Type: application/x-www-form-urlencoded
+
+username=man&age=15&hobbies=fdsf
+
+<> 2023-07-01T151627.400.txt
+
+###
+
+POST http://localhost:9000/api/users
+Content-Type: application/x-www-form-urlencoded
+
+username=man&age=15&hobbies=fdsf
+
+<> 2023-07-01T151552.400.txt
+
+###
+
+POST http://localhost:9000/api/users
+Content-Type: application/x-www-form-urlencoded
+
+username=man&age=15&hobbies=fdsf
+
+<> 2023-07-01T151537.400.txt
+
+###
+
+POST http://localhost:9000/api/users
+Content-Type: application/x-www-form-urlencoded
+
+id=99&content=new-element
+
+<> 2023-07-01T151455.400.txt
+
+###
+
+GET http://localhost:9000/api/users/8dbaae73-4fbf-4e1e-94b8-6093bd0eef58
+Accept: application/json
+
+<> 2023-07-01T145847.404.json
+
+###
+
+GET http://localhost:9000/api/users/8dbaae73-4fbf-4e1e-94b8-6093bd0eef58
+Accept: application/json
+
+<> 2023-07-01T145827.404.json
+
+###
+
+GET http://localhost:9000/api/users/8dbaae73-4fbf-4e1e-94b8-6093bd0eef58
+Accept: application/json
+
+<> 2023-07-01T145733.404.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T145713.200.json
+
+###
+
