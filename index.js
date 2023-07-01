@@ -38,19 +38,21 @@ function showMessage(mes, col) {
 }
 
 server.on("request", (request, response) => {
+  function setResponse(status, header = null, sendData = null) {
+    response.statusCode = status;
+    if (header) response.setHeader("Content-Type", "application/json");
+    if (sendData) response.write(sendData);
+    response.end();
+  }
   switch (request.method) {
     case "GET":
       if (request.url === routes.favicon) {
-        response.statusCode = 204;
-        response.end();
+        setResponse(204);
         break;
       }
       if (request.url === routes.mock) {
-        mockUsers.forEach(value => users.push(generateUser(...value)))
-        response.statusCode = 200;
-        response.setHeader("Content-Type", "application/json");
-        response.write(JSON.stringify(users));
-        response.end();
+        mockUsers.forEach((value) => users.push(generateUser(...value)));
+        setResponse(200, true, JSON.stringify(users));
         break;
       }
       const urlParams = request.url.split("/");
@@ -60,44 +62,28 @@ server.on("request", (request, response) => {
       ) {
         switch (urlParams.length) {
           case 3: {
-            response.statusCode = 200;
-            response.setHeader("Content-Type", "application/json");
-            response.write(JSON.stringify(users));
-            response.end();
+            setResponse(200, true, JSON.stringify(users));
             break;
           }
           case 4: {
             const id = urlParams.at(3);
             if (!uuid.validate(id)) {
-              response.statusCode = 400;
-              response.setHeader("Content-Type", "application/json");
-              response.write(`User id «${id}» is not valid UUID!`);
-              response.end();
+              setResponse(400, true, `User id «${id}» is not valid UUID!`);
               break;
             }
             const user = findUser(id);
             if (user.length > 0) {
-              response.statusCode = 200;
-              response.setHeader("Content-Type", "application/json");
-              response.write(JSON.stringify(user));
-              response.end();
+              setResponse(200, true, JSON.stringify(user));
             } else {
-              response.statusCode = 404;
-              response.setHeader("Content-Type", "application/json");
-              response.write(`User with id «${id}» does not exist!`);
-              response.end();
+              setResponse(404, true, `User with id «${id}» does not exist!`);
             }
             break;
           }
           default:
-            response.statusCode = 400;
-            response.write(`CANNOT GET ${request.url}`);
-            response.end();
+            setResponse(400, true, `CANNOT GET ${request.url}`);
         }
       } else {
-        response.statusCode = 400;
-        response.write(`CANNOT GET ${request.url}`);
-        response.end();
+        setResponse(400, true, `CANNOT GET ${request.url}`);
       }
       break;
     case "POST":
@@ -118,14 +104,9 @@ server.on("request", (request, response) => {
             search.get("hobbies").split(",")
           );
           users.push(newUser);
-          response.statusCode = 200;
-          response.setHeader("Content-Type", "application/json");
-          response.write(JSON.stringify(newUser));
-          response.end();
+          setResponse(200, true, JSON.stringify(newUser));
         } else {
-          response.statusCode = 400;
-          response.write(`Body does not contain required fields`);
-          response.end();
+          setResponse(400, true, `Body does not contain required fields`);
         }
       });
       break;
@@ -137,10 +118,7 @@ server.on("request", (request, response) => {
       ) {
         const idPUT = urlParamsPUT.at(3);
         if (!uuid.validate(idPUT)) {
-          response.statusCode = 400;
-          response.setHeader("Content-Type", "application/json");
-          response.write(`User id «${idPUT}» is not valid UUID!`);
-          response.end();
+          setResponse(400, true, `User id «${idPUT}» is not valid UUID!`);
           break;
         }
         const userForUpdate = findUser(idPUT);
@@ -167,22 +145,14 @@ server.on("request", (request, response) => {
                 break;
               }
             }
-            response.statusCode = 200;
-            response.setHeader("Content-Type", "application/json");
-            response.write(JSON.stringify(findUser(idPUT)));
-            response.end();
+            setResponse(200, true, JSON.stringify(findUser(idPUT)));
           });
         } else {
-          response.statusCode = 404;
-          response.setHeader("Content-Type", "application/json");
-          response.write(`User with id «${idPUT}» does not exist!`);
-          response.end();
+          setResponse(404, true, `User with id «${idPUT}» does not exist!`);
           break;
         }
       } else {
-        response.statusCode = 400;
-        response.write(`CANNOT GET ${request.url}`);
-        response.end();
+        setResponse(400, true, `CANNOT GET ${request.url}`);
       }
       break;
     case "DELETE":
@@ -193,10 +163,7 @@ server.on("request", (request, response) => {
       ) {
         const idDEL = urlParamsDEL.at(3);
         if (!uuid.validate(idDEL)) {
-          response.statusCode = 400;
-          response.setHeader("Content-Type", "application/json");
-          response.write(`User id «${idDEL}» is not valid UUID!`);
-          response.end();
+          setResponse(400, true, `User id «${idDEL}» is not valid UUID!`);
           break;
         }
         const userForDelete = findUser(idDEL);
@@ -205,25 +172,17 @@ server.on("request", (request, response) => {
             (value) => value.id === userForDelete.at(0).id
           );
           users.splice(indexForDelete, 1);
-          response.statusCode = 204;
-          response.end();
+          setResponse(204);
         } else {
-          response.statusCode = 404;
-          response.setHeader("Content-Type", "application/json");
-          response.write(`User with id «${idDEL}» does not exist!`);
-          response.end();
+          setResponse(404, true, `User with id «${idDEL}» does not exist!`);
           break;
         }
       } else {
-        response.statusCode = 400;
-        response.write(`CANNOT GET ${request.url}`);
-        response.end();
+        setResponse(400, true, `CANNOT GET ${request.url}`);
       }
       break;
     default:
-      response.statusCode = 400;
-      response.write("No Response");
-      response.end();
+      setResponse(400, true, "No Response");
   }
 });
 
