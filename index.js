@@ -1,1 +1,4 @@
-import 'dotenv/config'
+import "dotenv/config";
+import { v4 as uuidv4 } from 'uuid';
+
+console.log(uuidv4())
