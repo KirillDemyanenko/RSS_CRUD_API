@@ -95,8 +95,90 @@ server.on("request", (request, response) => {
       }
       break;
     case "POST":
+      let body = "";
+      request.on("data", (data) => {
+        body += data;
+      });
+      request.on("end", () => {
+        const search = new URLSearchParams(JSON.parse(body.toString()));
+        if (
+          search.has("username") &&
+          search.has("age") &&
+          search.has("hobbies")
+        ) {
+          const newUser = generateUser(
+            search.get("username"),
+            search.get("age"),
+            search.get("hobbies").split(",")
+          );
+          users.push(newUser);
+          response.statusCode = 200;
+          response.setHeader("Content-Type", "application/json");
+          response.write(JSON.stringify(newUser));
+          response.end();
+        } else {
+          response.statusCode = 400;
+          response.write(`Body does not contain required fields`);
+          response.end();
+        }
+      });
       break;
     case "PUT":
+      const urlParamsPUT = request.url.split("/");
+      if (
+        request.url.includes(routes.allUsersRecords) &&
+        urlParamsPUT.length === 4
+      ) {
+        const idPUT = urlParamsPUT.at(3);
+        if (!uuid.validate(idPUT)) {
+          response.statusCode = 400;
+          response.setHeader("Content-Type", "application/json");
+          response.write(`User id «${idPUT}» is not valid UUID!`);
+          response.end();
+          break;
+        }
+        const userForUpdate = findUser(idPUT);
+        if (userForUpdate.length > 0) {
+          let bodyPUT = "";
+          request.on("data", (data) => {
+            bodyPUT += data;
+          });
+          request.on("end", () => {
+            const searchPUT = new URLSearchParams(
+              JSON.parse(bodyPUT.toString())
+            );
+            for (let i = 0; i < users.length; i++) {
+              if (users[i].id === userForUpdate.at(0).id) {
+                console.log("ok");
+                if (searchPUT.has("username")) {
+                  users[i].username = searchPUT.get("username");
+                }
+                if (searchPUT.has("age")) {
+                  users[i].age = searchPUT.get("age");
+                }
+                if (searchPUT.has("hobbies")) {
+                  users[i].hobbies = [...searchPUT.get("hobbies").split(",")];
+                }
+                break;
+              }
+            }
+            response.statusCode = 200;
+            response.setHeader("Content-Type", "application/json");
+            response.write(JSON.stringify(findUser(idPUT)));
+            response.end();
+          });
+        } else {
+          response.statusCode = 404;
+          response.setHeader("Content-Type", "application/json");
+          response.write(`User with id «${idPUT}» does not exist!`);
+          response.end();
+          break;
+        }
+      } else {
+        response.statusCode = 400;
+        response.write(`CANNOT GET ${request.url}`);
+        response.end();
+      }
       break;
     case "DELETE":
       break;
