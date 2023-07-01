@@ -56,7 +56,11 @@ server.on("request", (request, response) => {
           case 3: {
             response.statusCode = 200;
             response.setHeader("Content-Type", "application/json");
-            response.write(JSON.stringify(users));
+            if (users.length > 0) {
+              response.write(JSON.stringify(users));
+            } else {
+              response.write("Database is empty...");
+            }
             response.end();
             break;
           }
@@ -149,7 +153,6 @@ server.on("request", (request, response) => {
             );
             for (let i = 0; i < users.length; i++) {
               if (users[i].id === userForUpdate.at(0).id) {
-                console.log("ok");
                 if (searchPUT.has("username")) {
                   users[i].username = searchPUT.get("username");
                 }
@@ -181,6 +184,39 @@ server.on("request", (request, response) => {
       }
       break;
     case "DELETE":
+      const urlParamsDEL = request.url.split("/");
+      if (
+        request.url.includes(routes.allUsersRecords) &&
+        urlParamsDEL.length === 4
+      ) {
+        const idDEL = urlParamsDEL.at(3);
+        if (!uuid.validate(idDEL)) {
+          response.statusCode = 400;
+          response.setHeader("Content-Type", "application/json");
+          response.write(`User id «${idDEL}» is not valid UUID!`);
+          response.end();
+          break;
+        }
+        const userForDelete = findUser(idDEL);
+        if (userForDelete.length > 0) {
+          const indexForDelete = users.findIndex(
+            (value) => value.id === userForDelete.at(0).id
+          );
+          users.splice(indexForDelete, 1);
+          response.statusCode = 204;
+          response.end();
+        } else {
+          response.statusCode = 404;
+          response.setHeader("Content-Type", "application/json");
+          response.write(`User with id «${idDEL}» does not exist!`);
+          response.end();
+          break;
+        }
+      } else {
+        response.statusCode = 400;
+        response.write(`CANNOT GET ${request.url}`);
+        response.end();
+      }
       break;
     default:
       response.statusCode = 400;
