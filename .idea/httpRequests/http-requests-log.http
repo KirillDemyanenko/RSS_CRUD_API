@@ -1,3 +1,134 @@
+DELETE http://localhost:9000/api/users/b9b5d756-a68b-439d-bbee-14141976b0bd
+Accept: application/json
+
+<> 2023-07-01T173840.404.json
+
+###
+
+DELETE http://localhost:9000/api/users/b9b5d756-a68b-439d-bbee-14141976b0bd
+Accept: application/json
+
+<> 2023-07-01T173832.404.json
+
+###
+
+DELETE http://localhost:9000/api/users/b9b5d756-a68b-439d-bbee-14141976b0bd
+Accept: application/json
+
+<> 2023-07-01T173831.404.json
+
+###
+
+GET http://localhost:9000/api/users/3972c7ad-178f-456f-83c1-26b72a13a391
+Accept: application/json
+
+<> 2023-07-01T173827.404.json
+
+###
+
+DELETE http://localhost:9000/api/users/b9b5d756-a68b-439d-bbee-14141976b0bd
+Accept: application/json
+
+<> 2023-07-01T173826.404.json
+
+###
+
+DELETE http://localhost:9000/api/users/b9b5d756-a68b-439d-bbee-14141976b0bd
+Accept: application/json
+
+<> 2023-07-01T173812.404.json
+
+###
+
+PUT http://localhost:9000/api/users/023638a9-c55d-473d-8b7c-9b2027b032de
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man1","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T172628.404.json
+
+###
+
+DELETE http://localhost:9000/api/users/b9b5d756-a68b-439d-bbee-14141976b0bd
+Accept: application/json
+
+<> 2023-07-01T172618.404.json
+
+###
+
+DELETE http://localhost:9000/api/users/b9b5d756-a68b-439d-bbee-14141976b0bd
+Accept: application/json
+
+<> 2023-07-01T172616.404.json
+
+###
+
+POST http://localhost:9000/api/users
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T172606.200.json
+
+###
+
+POST http://localhost:9000/api/users
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T172604.200.json
+
+###
+
+GET http://localhost:9000/favicon.ico
+Accept: application/json
+
+###
+
+GET http://localhost:9000/favicon.ico
+Accept: application/json
+
+###
+
+GET http://localhost:9000/api/users/3972c7ad-178f-456f-83c1-26b72a13a391
+Accept: application/json
+
+<> 2023-07-01T172555.404.json
+
+###
+
+GET http://localhost:9000/api/mock
+Accept: application/json
+
+<> 2023-07-01T172552.200.json
+
+###
+
+GET http://localhost:9000/api/mock
+Accept: application/json
+
+<> 2023-07-01T171010.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T171007.200.json
+
+###
+
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T170223.200.json
+
+###
+
 GET http://localhost:9000/api/users
 Accept: application/json
 
@@ -211,150 +342,6 @@ DELETE http://localhost:9000/api/users/fds
 Accept: application/json
 
 <> 2023-07-01T162932.400.json
-
-###
-
-DELETE http://localhost:9000/api/users/fds
-Accept: application/json
-
-<> 2023-07-01T162929.400.json
-
-###
-
-DELETE http://localhost:9000/api/users/fds
-Accept: application/json
-
-<> 2023-07-01T162927.400.json
-
-###
-
-GET http://localhost:9000/api/users/3972c7ad-178f-456f-83c1-26b72a13a391
-Accept: application/json
-
-<> 2023-07-01T162921.404.json
-
-###
-
-DELETE http://localhost:9000/api/users/fds
-Accept: application/json
-
-<> 2023-07-01T162911.400.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T161940.200.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T161937.200.json
-
-###
-
-PUT http://localhost:9000/api/users/023638a9-c55d-473d-8b7c-9b2027b032de
-Accept: application/json
-Content-Type: application/json
-
-{"username": "man1","age": 15,"hobbies": ["ddd","ddds","cccc"]}
-
-<> 2023-07-01T161932.200.json
-
-###
-
-PUT http://localhost:9000/api/users/023638a9-c55d-473d-8b7c-9b2027b032de
-Accept: application/json
-Content-Type: application/json
-
-{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
-
-<> 2023-07-01T161920.200.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T161909.200.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T161906.200.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T161829.200.json
-
-###
-
-PUT http://localhost:9000/api/users/b3c3b9f0-773c-4702-8edc-ed450e56fe0e
-Accept: application/json
-Content-Type: application/json
-
-{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
-
-<> 2023-07-01T161817.200.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T161808.200.json
-
-###
-
-PUT http://localhost:9000/api/users/304c2cd1-f273-4cff-83bd-2ad181b41490
-Accept: application/json
-Content-Type: application/json
-
-{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
-
-<> 2023-07-01T161604.200.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T161554.200.json
-
-###
-
-PUT http://localhost:9000/api/users/f1888895-7655-49ec-bdfc-7f5ac84bc0df
-Accept: application/json
-Content-Type: application/json
-
-{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
-
-<> 2023-07-01T161502.200.json
-
-###
-
-GET http://localhost:9000/api/users
-Accept: application/json
-
-<> 2023-07-01T161449.200.json
-
-###
-
-PUT http://localhost:9000/api/users/5a06ac1d-e47d-4988-822a-10f3974fbc39
-Accept: application/json
-Content-Type: application/json
-
-{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
-
-<> 2023-07-01T161411.200.json
 
 ###
 

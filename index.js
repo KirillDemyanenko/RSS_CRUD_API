@@ -39,10 +39,19 @@ function showMessage(mes, col) {
 
 server.on("request", (request, response) => {
   function setResponse(status, header = null, sendData = null) {
-    response.statusCode = status;
-    if (header) response.setHeader("Content-Type", "application/json");
-    if (sendData) response.write(sendData);
-    response.end();
+    try {
+      response.statusCode = status;
+      if (header) response.setHeader("Content-Type", "application/json");
+      if (sendData) response.write(sendData);
+      response.end();
+    } catch (err) {
+      response.statusCode = 500;
+      response.setHeader("Content-Type", "text/html; charset=utf-8");
+      response.write(
+        `Server encountered an unexpected condition that prevented it from fulfilling the request...`
+      );
+      response.end();
+    }
   }
   switch (request.method) {
     case "GET":
@@ -88,6 +97,14 @@ server.on("request", (request, response) => {
       break;
     case "POST":
       let body = "";
+      request.on("error", (err) => {
+        if (err)
+          setResponse(
+            500,
+            true,
+            "Server encountered an unexpected condition that prevented it from fulfilling the request..."
+          );
+      });
       request.on("data", (data) => {
         body += data;
       });
@@ -124,6 +141,14 @@ server.on("request", (request, response) => {
         const userForUpdate = findUser(idPUT);
         if (userForUpdate.length > 0) {
           let bodyPUT = "";
+          request.on("error", (err) => {
+            if (err)
+              setResponse(
+                500,
+                true,
+                "Server encountered an unexpected condition that prevented it from fulfilling the request..."
+              );
+          });
           request.on("data", (data) => {
             bodyPUT += data;
           });
@@ -184,6 +209,10 @@ server.on("request", (request, response) => {
     default:
       setResponse(400, true, "No Response");
   }
+});
+
+server.on("error", (err) => {
+  console.error(err);
 });
 
 server.listen(PORT, (err) => {
