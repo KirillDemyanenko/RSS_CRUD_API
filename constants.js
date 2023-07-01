@@ -8,6 +8,7 @@ export const colors = Object.freeze({
 export const routes = Object.freeze({
   allUsersRecords: "/api/users",
   favicon: "/favicon.ico",
+  mock: '/api/mock'
 });
 
 export const mockUsers = [

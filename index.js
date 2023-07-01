@@ -37,13 +37,19 @@ function showMessage(mes, col) {
   console.log(`\x1b[${color}m >>> ${mes} <<< \x1b[0m`);
 }
 
-mockUsers.forEach((val) => users.push(generateUser(...val)));
-
 server.on("request", (request, response) => {
   switch (request.method) {
     case "GET":
       if (request.url === routes.favicon) {
         response.statusCode = 204;
+        response.end();
+        break;
+      }
+      if (request.url === routes.mock) {
+        mockUsers.forEach(value => users.push(generateUser(...value)))
+        response.statusCode = 200;
+        response.setHeader("Content-Type", "application/json");
+        response.write(JSON.stringify(users));
         response.end();
         break;
       }
@@ -56,11 +62,7 @@ server.on("request", (request, response) => {
           case 3: {
             response.statusCode = 200;
             response.setHeader("Content-Type", "application/json");
-            if (users.length > 0) {
-              response.write(JSON.stringify(users));
-            } else {
-              response.write("Database is empty...");
-            }
+            response.write(JSON.stringify(users));
             response.end();
             break;
           }
