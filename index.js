@@ -83,7 +83,7 @@ server.on("request", (request, response) => {
             setResponse(400, true, `CANNOT GET ${request.url}`);
         }
       } else {
-        setResponse(400, true, `CANNOT GET ${request.url}`);
+        setResponse(404, true, `CANNOT GET ${request.url}`);
       }
       break;
     case "POST":
@@ -178,7 +178,7 @@ server.on("request", (request, response) => {
           break;
         }
       } else {
-        setResponse(400, true, `CANNOT GET ${request.url}`);
+        setResponse(404, true, `CANNOT GET ${request.url}`);
       }
       break;
     default:
