@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "task is to implement simple CRUD API using in-memory database underneath",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --delay 2500ms index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,11 @@
     "url": "https://github.com/KirillDemyanenko/RSS_CRUD_API/issues"
   },
   "homepage": "https://github.com/KirillDemyanenko/RSS_CRUD_API#readme",
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
 }
