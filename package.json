@@ -1,0 +1,20 @@
+{
+  "name": "rss_crud_api",
+  "version": "1.0.0",
+  "description": "task is to implement simple CRUD API using in-memory database underneath",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KirillDemyanenko/RSS_CRUD_API.git"
+  },
+  "author": "Kirill Demyanenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KirillDemyanenko/RSS_CRUD_API/issues"
+  },
+  "homepage": "https://github.com/KirillDemyanenko/RSS_CRUD_API#readme",
+  "keywords": []
+}
