@@ -20,5 +20,9 @@
 
     GET http://localhost:9000/api/users
 
+#### For test run server and ####
+
+    npm run test
+
     
 
