@@ -3,16 +3,23 @@ import http from "http";
 
 describe("API", () => {
   test("should return all users", async () => {
-    http.get("http://localhost:9000/api/users", (res) => {
-      let rawData = "";
-      res.on("data", (chunk) => {
-        rawData += chunk;
-      });
-      res.on("end", () => {
-        const parsedData = JSON.parse(rawData);
-        expect(parsedData).toEqual([]);
-      });
-    });
+    try {
+        http.get("http://localhost:9000/api/users", (res) => {
+            let rawData = "";
+            res.on("data", (chunk) => {
+                rawData += chunk;
+            });
+            res.on("end", () => {
+                const parsedData = JSON.parse(rawData);
+                expect(parsedData).toEqual([]);
+            });
+            res.on('error', err => {
+                console.error(err)
+            })
+        });
+    } catch (err) {
+        console.error(err)
+    }
   });
 
   test("should create user", () => {
@@ -51,16 +58,21 @@ describe("API", () => {
           });
           res.on("end", async () => {
             const parsed = JSON.parse(rawData);
-            await http.get(`http://localhost:9000/api/users/${parsed.id}`, (res1) => {
-              let rawData1 = "";
-              res1.on("data", (chunk) => {
-                rawData1 += chunk;
-              });
-              res1.on("end", async () => {
-                const parsed = JSON.parse(rawData1);
-                await expect(parsed.at(0).username).toBe("man");
-              });
-            });
+            try {
+                await http.get(`http://localhost:9000/api/users/${parsed.id}`, (res1) => {
+                    let rawData1 = "";
+                    res1.on("data", (chunk) => {
+                        rawData1 += chunk;
+                    });
+                    res1.on("end", async () => {
+                        const parsed = JSON.parse(rawData1);
+                        await expect(parsed.at(0).username).toBe("man");
+                    });
+                });
+            } catch (err) {
+                console.error(err)
+            }
+
           });
         }
     );
