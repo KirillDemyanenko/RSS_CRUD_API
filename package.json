@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "task is to implement simple CRUD API using in-memory database underneath",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --delay 2500ms index.js",
+    "test": "jest --config ./jest.config.json"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,18 @@
     "url": "https://github.com/KirillDemyanenko/RSS_CRUD_API/issues"
   },
   "homepage": "https://github.com/KirillDemyanenko/RSS_CRUD_API#readme",
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "@jest/globals": "^29.5.0",
+    "dotenv": "^16.3.1",
+    "prettier": "^2.8.8",
+    "uuid": "^9.0.0"
+  }
 }

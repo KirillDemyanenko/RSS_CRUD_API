@@ -1,0 +1,84 @@
+PUT http://localhost:9000/api/users/023638a9-c55d-473d-8b7c-9b2027b032de
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man1","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T172628.404.json
+
+###
+DELETE http://localhost:9000/api/users/b9b5d756-a68b-439d-bbee-14141976b0bd
+Accept: application/json
+
+<> 2023-07-01T173840.404.json
+<> 2023-07-01T173832.404.json
+<> 2023-07-01T173831.404.json
+<> 2023-07-01T173826.404.json
+<> 2023-07-01T173812.404.json
+<> 2023-07-01T172618.404.json
+<> 2023-07-01T172616.404.json
+<> 2023-07-01T163823.404.json
+<> 2023-07-01T163753.404.json
+<> 2023-07-01T163747.404.json
+<> 2023-07-01T163314.404.json
+<> 2023-07-01T163306.400.json
+<> 2023-07-01T163304.400.json
+<> 2023-07-01T163003.400.json
+<> 2023-07-01T162957.400.json
+<> 2023-07-01T162941.400.json
+<> 2023-07-01T162932.400.json
+
+###
+POST http://localhost:9000/api/users
+Accept: application/json
+Content-Type: application/json
+
+{"username": "man","age": 15,"hobbies": ["ddd","ddds","cccc"]}
+
+<> 2023-07-01T172606.200.json
+<> 2023-07-01T172604.200.json
+
+###
+GET http://localhost:9000/favicon.ico
+Accept: application/json
+
+###
+GET http://localhost:9000/api/users/3972c7ad-178f-456f-83c1-26b72a13a391
+Accept: application/json
+
+<> 2023-07-01T173827.404.json
+<> 2023-07-01T172555.404.json
+
+###
+GET http://localhost:9000/api/mock
+Accept: application/json
+
+<> 2023-07-01T172552.200.json
+<> 2023-07-01T171010.200.json
+<> 2023-07-01T165819.200.json
+<> 2023-07-01T165726.200.json
+<> 2023-07-01T165724.200.json
+<> 2023-07-01T165707.200.json
+
+###
+GET http://localhost:9000/api/users
+Accept: application/json
+
+<> 2023-07-01T171007.200.json
+<> 2023-07-01T170223.200.json
+<> 2023-07-01T165823.200.json
+<> 2023-07-01T165813.200.json
+<> 2023-07-01T165733.200.json
+<> 2023-07-01T165731.200.json
+<> 2023-07-01T165720.200.json
+<> 2023-07-01T165717.200.json
+<> 2023-07-01T165651.200.json
+<> 2023-07-01T165649.200.json
+<> 2023-07-01T164044.200.json
+<> 2023-07-01T164024.200.json
+<> 2023-07-01T164001.200.json
+<> 2023-07-01T163938.200.json
+<> 2023-07-01T163833.200.json
+<> 2023-07-01T163736.200.json
+
+###
